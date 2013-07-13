@@ -1,0 +1,11 @@
+{
+    "name": "OpenHack",
+    "version": "0.0.0",
+    "description": "Real time collab",
+    "dependencies": {
+        "socket.io": "*",
+        "express": "*",
+        "jade": "*"
+    },
+    "author": "developer"
+}

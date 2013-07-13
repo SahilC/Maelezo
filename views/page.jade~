@@ -1,0 +1,16 @@
+!!!
+html
+    head
+        title= "Real time web chat"
+        script(src='/chat.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='jquery.js')
+        script(src='http://devfiles.myopera.com/articles/649/example5.js')
+    body
+        #container
+                canvas#imageView(width="400",height="300")
+                select#dtool
+                     option(value="line") Line
+                     option(value="rect") Rectangle
+                     option(value="pencil") Pencil
+    
