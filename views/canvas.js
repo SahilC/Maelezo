@@ -3,7 +3,7 @@
  */
 
 // Keep everything in anonymous function, called on window load.
-var socket=io.connect(window.location.hostname);	
+var socket=io.connect(window.location.hostname);
 
 var list=[];
 if(window.addEventListener) {
@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
 
   // The active tool instance.
   var tool;
-  var tool_default = 'line';
+  var tool_default = 'pencil';
 
   function init () {
     // Find the canvas element.
@@ -33,7 +33,6 @@ window.addEventListener('load', function () {
       alert('Error: failed to getContext!');
       return;
     }
-
     // Add the temporary canvas.
     var container = canvaso.parentNode;
     canvas = document.createElement('canvas');
@@ -112,50 +111,60 @@ window.addEventListener('load', function () {
 
     // This is called when you start holding down the mouse button.
     // This starts the pencil drawing.
-var lastx,lasty;    
+var lastx,lasty;
+var flag=true,flagr=true;    
 	this.mousedown = function (ev) {
-        context.beginPath();
+	flag=true;
+	socket.emit('flag',flag);
+	context.beginPath();
         context.moveTo(ev._x, ev._y);
 	var point={'x': ev._x, 'y': ev._y};
-	console.log(point);
 	socket.emit("spoint",point);
         lastx=ev._x;
 	lasty=ev._y;
-        tool.started = true;
+	tool.started = true;
     };
     
 	socket.on("drwPoint",function(data){
-		context.moveTo(data.x-1,data.y-1);
-		context.lineTo(data.x,data.y);	
+		context.moveTo(data.x,data.y);	
 		context.stroke();	
 	});	
     // This function is called every time you move the mouse. Obviously, it only 
     // draws if the tool.started state is set to true (when you are holding down 
     // the mouse button).
     this.mousemove = function (ev) {
-      if (tool.started) {
+      if (tool.started) {        
         context.lineTo(ev._x, ev._y);
 	var point={'x': ev._x, 'y': ev._y};
 	socket.emit("point",point);
         context.stroke();
       }
     };
-
 socket.on("drawPoint",function(data){
-		context.moveTo(lastx, lasty);
+		if(flagr==true)
+			context.moveTo(lastx, lasty);
+		else
+			context.moveTo(data.x, data.y);
 		context.lineTo(data.x,data.y);
 		list.push({'x':data.x,'y':data.y});
 		lastx=data.x;
 		lasty=data.y;		
 		context.stroke();
 	});
+
+socket.on("uflag",function(data){
+		flagr=data;
+	});
     // This is called when you release the mouse button.
     this.mouseup = function (ev) {
-      if (tool.started) {
-        tool.mousemove(ev);
+	flag=false;
+	socket.emit('flag',flag);
+	if (tool.started) {        
+	tool.mousemove(ev);
         tool.started = false;
-        img_update();
+	img_update();
       }
+	
     };
   };
 
@@ -235,7 +244,8 @@ socket.on("drawPoint",function(data){
   init();
 
 }, false); }
-$('#container').resizable();
+$('body').on('DOMNodeInserted ', '#container', function(){
+	$('#container').resizable();
 		var x=document.getElementById('container');
 		x.onresize=function(){
 			socket.emit("dim",{'width':$('#container').width(),'height':$('#container').height()});
@@ -247,7 +257,6 @@ socket.on("redraw",function(data){
 YUI().use('node',function(Y){
 socket.on("drawmove",function(data){
 	var ele = Y.one('#container');
-	console.log("Lalala: "+data.x);
 	ele.setXY([data.x, data.y]);
 });
 });
@@ -259,10 +268,11 @@ YUI().use('dd-drag', function(Y) {
 YUI().use('node','event',function(Y){	
 	dd.on("drag:drag",function(){
 		var ele = Y.one('#container');
-		console.log(ele.getX());
 		socket.emit('move',{'x':ele.getX(), 'y':ele.getY()});
 	});
 });
 });
+});
+    
 });
 

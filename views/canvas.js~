@@ -3,7 +3,8 @@
  */
 
 // Keep everything in anonymous function, called on window load.
-var socket=io.connect('http://localhost:3700');	
+var socket=io.connect(window.location.hostname);	
+
 var list=[];
 if(window.addEventListener) {
 window.addEventListener('load', function () {
@@ -243,12 +244,13 @@ socket.on("redraw",function(data){
 	$('#container').width(data.width);
 	$('#container').height(data.height);
 });
+YUI().use('node',function(Y){
 socket.on("drawmove",function(data){
 	var ele = Y.one('#container');
 	console.log("Lalala: "+data.x);
 	ele.setXY([data.x, data.y]);
 });
-
+});
 $(function(){
 YUI().use('dd-drag', function(Y) {
     	dd = new Y.DD.Drag({
