@@ -4,7 +4,7 @@
 
 // Keep everything in anonymous function, called on window load.
 var socket=io.connect('http://localhost:3700');	
-console.log("hello1");
+var list=[];
 if(window.addEventListener) {
 window.addEventListener('load', function () {
   var canvas, context, canvaso, contexto;
@@ -124,7 +124,6 @@ var lastx,lasty;
     };
     
 	socket.on("drwPoint",function(data){
-		console.log(data.x+' '+data.y);
 		context.moveTo(data.x-1,data.y-1);
 		context.lineTo(data.x,data.y);	
 		context.stroke();	
@@ -144,6 +143,7 @@ var lastx,lasty;
 socket.on("drawPoint",function(data){
 		context.moveTo(lastx, lasty);
 		context.lineTo(data.x,data.y);
+		list.push({'x':data.x,'y':data.y});
 		lastx=data.x;
 		lasty=data.y;		
 		context.stroke();
@@ -234,7 +234,14 @@ socket.on("drawPoint",function(data){
   init();
 
 }, false); }
-
-
+$('#container').resizable();
+		var x=document.getElementById('container');
+		x.onresize=function(){
+			socket.emit("dim",{'width':$('#container').width(),'height':$('#container').height()});
+		};
+socket.on("redraw",function(data){
+	$('#container').width(data.width);
+	$('#container').height(data.height);
+});
 
 

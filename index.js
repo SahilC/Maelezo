@@ -20,5 +20,9 @@ io.sockets.on('connection',function(socket){
 socket.on("spoint",function(data){
 		socket.broadcast.emit("drwPoint",data);
 	});
+socket.on("dim",function(data){
+		socket.broadcast.emit("redraw",data);
+	});
+
 });
 

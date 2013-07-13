@@ -16,11 +16,13 @@ io.sockets.on('connection',function(socket){
 	console.log("Connected");
 	socket.on("point",function(data){
 		socket.broadcast.emit("drawPoint",data);
-		console.log(data);
 	});
 socket.on("spoint",function(data){
 		socket.broadcast.emit("drwPoint",data);
-		console.log(data);
 	});
+socket.on("dim",function(data){
+		socket.broadcast.emit("drwPoint",data);
+	});
+
 });
 
