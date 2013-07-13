@@ -24,5 +24,9 @@ socket.on("dim",function(data){
 		socket.broadcast.emit("redraw",data);
 	});
 
+socket.on("move",function(data){
+		socket.broadcast.emit("drawmove",data);
+		console.log("hello");
+	});
 });
 

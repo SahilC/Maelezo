@@ -243,5 +243,25 @@ socket.on("redraw",function(data){
 	$('#container').width(data.width);
 	$('#container').height(data.height);
 });
-
+YUI().use('node',function(Y){
+socket.on("drawmove",function(data){
+	var ele = Y.one('#container');
+	console.log("Lalala: "+data.x);
+	ele.setXY([data.x, data.y]);
+});
+});
+$(function(){
+YUI().use('dd-drag', function(Y) {
+    	dd = new Y.DD.Drag({
+        	node: '#container'
+    		}).addHandle('#title');
+YUI().use('node','event',function(Y){	
+	dd.on("drag:drag",function(){
+		var ele = Y.one('#container');
+		console.log(ele.getX());
+		socket.emit('move',{'x':ele.getX(), 'y':ele.getY()});
+	});
+});
+});
+});
 
