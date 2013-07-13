@@ -1,11 +1,18 @@
 {
-    "name": "OpenHack",
-    "version": "0.0.0",
-    "description": "Real time collab",
-    "dependencies": {
-        "socket.io": "*",
-        "express": "*",
-        "jade": "*"
-    },
-    "author": "developer"
+  "name": "collab",
+  "version": "0.0.1",
+  "private": true,
+
+  "engines": {
+    "node": "*",
+    "npm":  "*"
+  },
+
+  "dependencies": {
+    "express": "~3.x",
+    "jade": "*",
+    "less-middleware": "*",
+    "socket.io": "~0.9.6",
+    "toobusy": "*"
+  }
 }

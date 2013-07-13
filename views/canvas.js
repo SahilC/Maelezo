@@ -3,7 +3,8 @@
  */
 
 // Keep everything in anonymous function, called on window load.
-var socket=io.connect('http://localhost:3700');	
+var socket=io.connect(window.location.hostname);	
+
 var list=[];
 if(window.addEventListener) {
 window.addEventListener('load', function () {
