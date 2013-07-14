@@ -71,10 +71,6 @@ var debug = true;
   socket.emit('status', { connected: 'true'});
 
   //Canavs emits
-  socket.on('newNote',function(data){
-		console.log(data);
-		socket.broadcast.emit('newNote',data);
-	});
   socket.on('updateView', function (data) {
     console.log(data);
 

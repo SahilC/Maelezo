@@ -64,8 +64,8 @@ YUI().use('gallery-canvas','node','event',function(Y){
                 case 'drawRelease':  lastx = lasty = null;
 					break;
 		case 'newNote': createCanvas(data['content']['id'],30,45,socket, "New Note");
+				 document.getElementById('title_'+data['content']['id']).style.background = "#"+data['content']['color'];
 				break;
-		case 'noteColor': document.getElementById(data['id']).style.background = "#"+data['content'];
            }
       });
 
@@ -77,8 +77,9 @@ createCanvas('t2',30,45,socket, "MOAR!");
 	var button=Y.one('#menu');
     	button.on('click',function(e){
 		var randomColor = Math.floor(Math.random()*16777215).toString(16);
-		createCanvas('container'+n,30,45,socket, "New Note");
-		socket.emit('updateView',{'type':'newNote', 'content':{'id':'container'+n, 'color':randomColor}});
+		createCanvas(n,30,45,socket, "New Note");
+		document.getElementById('title_'+n).style.background = "#"+randomColor;
+		socket.emit('updateView',{'type':'newNote', 'content':{'id':n, 'color':randomColor}});
 		n+=1;		
 	});
     });
