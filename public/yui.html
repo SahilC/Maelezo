@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+    <style type="text/css">
+    
+        .container { position: absolute; }
+        .imageView { border: 1px solid #000;width:100%;height:100% }
+        .imageTemp { position: absolute; top: 1px; left: 1px;width:100%;height:100% }
+        .title{ border-radius:15px 15px 0px 0px;text-align:center}
+    
+    </style>
+</head>
+<body>
+
+
+<script src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="yuican.js"></script>
+<script>
+if(window.addEventListener) {
+window.addEventListener('load', function () {
+YUI().use('gallery-canvas','node',function(Y){
+
+    var socket=io.connect(window.location.hostname);
+
+    var lastx, lasty;
+    var updateCanavs = function (id, x, y) {
+
+        console.log(x + ' ' + y + ' canvas_'+id);
+        
+        var ctx = document.getElementById('canvas_'+id).getContext('2d');
+
+        if(lastx && lasty)
+        {
+            ctx.moveTo(lastx, lasty);
+            ctx.lineTo(x,y);
+            ctx.stroke();
+
+            lastx = x;
+            lasty = y;
+        }
+        else
+        {
+            lastx = x;
+            lasty = y;
+        }
+    };
+
+    //Handle broadcasts
+    socket.on('viewUpdate', function (data) {
+           switch(data['type']){
+                case 'draw':  updateCanavs(data['id'], data['content']['x'], data['content']['y']);
+                             break;
+                case 'move':  Y.one('#container_'+data['id']).setXY([data['content']['x'], data['content']['y']]);
+                              break;
+                case 'resize':document.getElementById('container_'+data['id']).style.width = data['content']['width'];
+                              document.getElementById('container_'+data['id']).style.height = data['content']['height'];
+           }
+      });
+
+    createCanvas('test',0,0,socket);
+    createCanvas('blah',50,50,socket);
+
+});
+});
+}
+</script>
+</body>
+</html>
