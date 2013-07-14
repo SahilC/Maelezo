@@ -76,9 +76,8 @@ createCanvas('t2',30,45,socket, "MOAR!");
     YUI().use('event',function(Y){	
 	var button=Y.one('#menu');
     	button.on('click',function(e){
-		var randomColor = Math.floor(Math.random()*16777215).toString(16);
 		createCanvas('container'+n,30,45,socket, "New Note");
-		socket.emit('updateView',{'type':'newNote', 'content':{'id':'container'+n, 'color':randomColor}});
+		socket.emit('updateView',{'type':'newNote', 'content':{'id':'container'+n}});
 		n+=1;		
 	});
     });

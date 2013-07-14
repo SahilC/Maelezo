@@ -1,0 +1,495 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.2
+3 info using node@v0.10.13
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/sahil/opentemp/Collaborator-/Collaborator-',
+5 verbose install   [ 'express', 'jade', 'less-middleware', 'socket.io', 'toobusy' ] ]
+6 info preinstall collab@0.0.1
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'less-middleware@*', null ]
+9 verbose cache add name=undefined spec="less-middleware@*" args=["less-middleware@*",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'less-middleware@*',
+10 verbose parsed url   path: 'less-middleware@*',
+10 verbose parsed url   href: 'less-middleware@*' }
+11 verbose cache add name="less-middleware" spec="*" args=["less-middleware","*"]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: '*',
+12 verbose parsed url   path: '*',
+12 verbose parsed url   href: '*' }
+13 verbose addNamed [ 'less-middleware', '*' ]
+14 verbose addNamed [ null, '*' ]
+15 verbose cache add [ 'socket.io@~0.9.6', null ]
+16 verbose cache add name=undefined spec="socket.io@~0.9.6" args=["socket.io@~0.9.6",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'socket.io@~0.9.6',
+17 verbose parsed url   path: 'socket.io@~0.9.6',
+17 verbose parsed url   href: 'socket.io@~0.9.6' }
+18 verbose cache add name="socket.io" spec="~0.9.6" args=["socket.io","~0.9.6"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '~0.9.6',
+19 verbose parsed url   path: '~0.9.6',
+19 verbose parsed url   href: '~0.9.6' }
+20 verbose addNamed [ 'socket.io', '~0.9.6' ]
+21 verbose addNamed [ null, '>=0.9.6-0 <0.10.0-0' ]
+22 verbose cache add [ 'toobusy@*', null ]
+23 verbose cache add name=undefined spec="toobusy@*" args=["toobusy@*",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'toobusy@*',
+24 verbose parsed url   path: 'toobusy@*',
+24 verbose parsed url   href: 'toobusy@*' }
+25 verbose cache add name="toobusy" spec="*" args=["toobusy","*"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '*',
+26 verbose parsed url   path: '*',
+26 verbose parsed url   href: '*' }
+27 verbose addNamed [ 'toobusy', '*' ]
+28 verbose addNamed [ null, '*' ]
+29 verbose cache add [ 'express@~3.x', null ]
+30 verbose cache add name=undefined spec="express@~3.x" args=["express@~3.x",null]
+31 verbose parsed url { protocol: null,
+31 verbose parsed url   slashes: null,
+31 verbose parsed url   auth: null,
+31 verbose parsed url   host: null,
+31 verbose parsed url   port: null,
+31 verbose parsed url   hostname: null,
+31 verbose parsed url   hash: null,
+31 verbose parsed url   search: null,
+31 verbose parsed url   query: null,
+31 verbose parsed url   pathname: 'express@~3.x',
+31 verbose parsed url   path: 'express@~3.x',
+31 verbose parsed url   href: 'express@~3.x' }
+32 verbose cache add name="express" spec="~3.x" args=["express","~3.x"]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: '~3.x',
+33 verbose parsed url   path: '~3.x',
+33 verbose parsed url   href: '~3.x' }
+34 verbose addNamed [ 'express', '~3.x' ]
+35 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+36 verbose cache add [ 'jade@*', null ]
+37 verbose cache add name=undefined spec="jade@*" args=["jade@*",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'jade@*',
+38 verbose parsed url   path: 'jade@*',
+38 verbose parsed url   href: 'jade@*' }
+39 verbose cache add name="jade" spec="*" args=["jade","*"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: '*',
+40 verbose parsed url   path: '*',
+40 verbose parsed url   href: '*' }
+41 verbose addNamed [ 'jade', '*' ]
+42 verbose addNamed [ null, '*' ]
+43 silly lockFile 6c2318f2-less-middleware less-middleware@*
+44 verbose lock less-middleware@* /home/sahil/.npm/6c2318f2-less-middleware.lock
+45 silly lockFile f2e07591-socket-io-0-9-6 socket.io@~0.9.6
+46 verbose lock socket.io@~0.9.6 /home/sahil/.npm/f2e07591-socket-io-0-9-6.lock
+47 silly lockFile e123b716-toobusy toobusy@*
+48 verbose lock toobusy@* /home/sahil/.npm/e123b716-toobusy.lock
+49 silly lockFile 891205a3-express-3-x express@~3.x
+50 verbose lock express@~3.x /home/sahil/.npm/891205a3-express-3-x.lock
+51 silly lockFile ad03ed78-jade jade@*
+52 verbose lock jade@* /home/sahil/.npm/ad03ed78-jade.lock
+53 silly addNameRange { name: 'less-middleware', range: '*', hasData: false }
+54 silly addNameRange { name: 'socket.io',
+54 silly addNameRange   range: '>=0.9.6-0 <0.10.0-0',
+54 silly addNameRange   hasData: false }
+55 silly addNameRange { name: 'jade', range: '*', hasData: false }
+56 silly addNameRange { name: 'toobusy', range: '*', hasData: false }
+57 silly addNameRange { name: 'express', range: '>=3.0.0-0 <4.0.0-0', hasData: false }
+58 verbose url raw less-middleware
+59 verbose url resolving [ 'https://registry.npmjs.org/', './less-middleware' ]
+60 verbose url resolved https://registry.npmjs.org/less-middleware
+61 info trying registry request attempt 1 at 12:30:03
+62 verbose etag "XF1BKA04NLC3BBMGFTQY1HUX"
+63 http GET https://registry.npmjs.org/less-middleware
+64 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+65 verbose url raw socket.io
+66 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+67 verbose url resolved https://registry.npmjs.org/socket.io
+68 info trying registry request attempt 1 at 12:30:03
+69 verbose etag "52J9V5MO44EBFF9ABHW3RJQ22"
+70 http GET https://registry.npmjs.org/socket.io
+71 verbose url raw toobusy
+72 verbose url resolving [ 'https://registry.npmjs.org/', './toobusy' ]
+73 verbose url resolved https://registry.npmjs.org/toobusy
+74 info trying registry request attempt 1 at 12:30:03
+75 verbose etag "257WSS7DWJLP7N7BVP3FVOHZ5"
+76 http GET https://registry.npmjs.org/toobusy
+77 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+78 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+79 verbose url raw jade
+80 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+81 verbose url resolved https://registry.npmjs.org/jade
+82 info trying registry request attempt 1 at 12:30:03
+83 verbose etag "6AZBNURC30ZDXV3SDMUYBVZWB"
+84 http GET https://registry.npmjs.org/jade
+85 verbose url raw express
+86 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+87 verbose url resolved https://registry.npmjs.org/express
+88 info trying registry request attempt 1 at 12:30:03
+89 verbose etag "9H475BT3MW1COD5SUEWTJSF2B"
+90 http GET https://registry.npmjs.org/express
+91 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+92 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+93 info trying registry request attempt 2 at 12:30:13
+94 verbose etag "XF1BKA04NLC3BBMGFTQY1HUX"
+95 http GET https://registry.npmjs.org/less-middleware
+96 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+97 info trying registry request attempt 2 at 12:30:13
+98 verbose etag "52J9V5MO44EBFF9ABHW3RJQ22"
+99 http GET https://registry.npmjs.org/socket.io
+100 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+101 info trying registry request attempt 2 at 12:30:13
+102 verbose etag "257WSS7DWJLP7N7BVP3FVOHZ5"
+103 http GET https://registry.npmjs.org/toobusy
+104 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+105 info trying registry request attempt 2 at 12:30:13
+106 verbose etag "6AZBNURC30ZDXV3SDMUYBVZWB"
+107 http GET https://registry.npmjs.org/jade
+108 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+109 info trying registry request attempt 2 at 12:30:13
+110 verbose etag "9H475BT3MW1COD5SUEWTJSF2B"
+111 http GET https://registry.npmjs.org/express
+112 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+113 info trying registry request attempt 3 at 12:31:13
+114 verbose etag "XF1BKA04NLC3BBMGFTQY1HUX"
+115 http GET https://registry.npmjs.org/less-middleware
+116 info trying registry request attempt 3 at 12:31:13
+117 verbose etag "52J9V5MO44EBFF9ABHW3RJQ22"
+118 http GET https://registry.npmjs.org/socket.io
+119 info trying registry request attempt 3 at 12:31:13
+120 verbose etag "257WSS7DWJLP7N7BVP3FVOHZ5"
+121 http GET https://registry.npmjs.org/toobusy
+122 info trying registry request attempt 3 at 12:31:13
+123 verbose etag "6AZBNURC30ZDXV3SDMUYBVZWB"
+124 http GET https://registry.npmjs.org/jade
+125 info trying registry request attempt 3 at 12:31:13
+126 verbose etag "9H475BT3MW1COD5SUEWTJSF2B"
+127 http GET https://registry.npmjs.org/express
+128 http 304 https://registry.npmjs.org/less-middleware
+129 silly registry.get cb [ 304,
+129 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+129 silly registry.get     etag: '"XF1BKA04NLC3BBMGFTQY1HUX"',
+129 silly registry.get     date: 'Sun, 14 Jul 2013 07:01:48 GMT',
+129 silly registry.get     'content-length': '0' } ]
+130 verbose etag less-middleware from cache
+131 http 304 https://registry.npmjs.org/jade
+132 silly registry.get cb [ 304,
+132 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+132 silly registry.get     etag: '"6AZBNURC30ZDXV3SDMUYBVZWB"',
+132 silly registry.get     date: 'Sun, 14 Jul 2013 07:01:48 GMT',
+132 silly registry.get     'content-length': '0' } ]
+133 verbose etag jade from cache
+134 http 304 https://registry.npmjs.org/socket.io
+135 silly registry.get cb [ 304,
+135 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+135 silly registry.get     etag: '"52J9V5MO44EBFF9ABHW3RJQ22"',
+135 silly registry.get     date: 'Sun, 14 Jul 2013 07:01:48 GMT',
+135 silly registry.get     'content-length': '0' } ]
+136 verbose etag socket.io from cache
+137 http 304 https://registry.npmjs.org/toobusy
+138 silly registry.get cb [ 304,
+138 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+138 silly registry.get     etag: '"257WSS7DWJLP7N7BVP3FVOHZ5"',
+138 silly registry.get     date: 'Sun, 14 Jul 2013 07:01:48 GMT',
+138 silly registry.get     'content-length': '0' } ]
+139 verbose etag toobusy from cache
+140 silly addNameRange number 2 { name: 'less-middleware', range: '*', hasData: true }
+141 silly addNameRange versions [ 'less-middleware',
+141 silly addNameRange   [ '0.0.0',
+141 silly addNameRange     '0.1.0',
+141 silly addNameRange     '0.1.1',
+141 silly addNameRange     '0.1.2',
+141 silly addNameRange     '0.1.3',
+141 silly addNameRange     '0.1.4',
+141 silly addNameRange     '0.1.5',
+141 silly addNameRange     '0.1.6',
+141 silly addNameRange     '0.1.7',
+141 silly addNameRange     '0.1.8',
+141 silly addNameRange     '0.1.9',
+141 silly addNameRange     '0.1.10',
+141 silly addNameRange     '0.1.11',
+141 silly addNameRange     '0.1.12' ] ]
+142 verbose addNamed [ 'less-middleware', '0.1.12' ]
+143 verbose addNamed [ '0.1.12', '0.1.12' ]
+144 silly lockFile db4b9307-less-middleware-0-1-12 less-middleware@0.1.12
+145 verbose lock less-middleware@0.1.12 /home/sahil/.npm/db4b9307-less-middleware-0-1-12.lock
+146 silly addNameRange number 2 { name: 'toobusy', range: '*', hasData: true }
+147 silly addNameRange versions [ 'toobusy',
+147 silly addNameRange   [ '0.0.1', '0.1.0', '0.1.1', '0.2.0', '0.2.1', '0.2.2', '0.2.3' ] ]
+148 verbose addNamed [ 'toobusy', '0.2.3' ]
+149 verbose addNamed [ '0.2.3', '0.2.3' ]
+150 silly lockFile a92681f0-toobusy-0-2-3 toobusy@0.2.3
+151 verbose lock toobusy@0.2.3 /home/sahil/.npm/a92681f0-toobusy-0-2-3.lock
+152 silly addNameRange number 2 { name: 'socket.io',
+152 silly addNameRange   range: '>=0.9.6-0 <0.10.0-0',
+152 silly addNameRange   hasData: true }
+153 silly addNameRange versions [ 'socket.io',
+153 silly addNameRange   [ '0.3.8',
+153 silly addNameRange     '0.4.0',
+153 silly addNameRange     '0.4.1',
+153 silly addNameRange     '0.5.1',
+153 silly addNameRange     '0.5.3',
+153 silly addNameRange     '0.6.0',
+153 silly addNameRange     '0.6.1',
+153 silly addNameRange     '0.6.3',
+153 silly addNameRange     '0.6.4',
+153 silly addNameRange     '0.6.5',
+153 silly addNameRange     '0.6.6',
+153 silly addNameRange     '0.6.7',
+153 silly addNameRange     '0.6.8',
+153 silly addNameRange     '0.6.9',
+153 silly addNameRange     '0.6.10',
+153 silly addNameRange     '0.6.11',
+153 silly addNameRange     '0.6.12',
+153 silly addNameRange     '0.6.14',
+153 silly addNameRange     '0.6.15',
+153 silly addNameRange     '0.6.16',
+153 silly addNameRange     '0.6.17',
+153 silly addNameRange     '0.6.18',
+153 silly addNameRange     '0.7.0',
+153 silly addNameRange     '0.7.1',
+153 silly addNameRange     '0.7.2',
+153 silly addNameRange     '0.7.3',
+153 silly addNameRange     '0.7.4',
+153 silly addNameRange     '0.7.5',
+153 silly addNameRange     '0.7.6',
+153 silly addNameRange     '0.7.7',
+153 silly addNameRange     '0.7.8',
+153 silly addNameRange     '0.7.9',
+153 silly addNameRange     '0.7.10',
+153 silly addNameRange     '0.7.11',
+153 silly addNameRange     '0.8.0',
+153 silly addNameRange     '0.8.1',
+153 silly addNameRange     '0.8.2',
+153 silly addNameRange     '0.8.3',
+153 silly addNameRange     '0.8.4',
+153 silly addNameRange     '0.8.5',
+153 silly addNameRange     '0.8.6',
+153 silly addNameRange     '0.8.7',
+153 silly addNameRange     '0.9.0',
+153 silly addNameRange     '0.9.1',
+153 silly addNameRange     '0.9.1-1',
+153 silly addNameRange     '0.9.2',
+153 silly addNameRange     '0.9.3',
+153 silly addNameRange     '0.9.4',
+153 silly addNameRange     '0.9.5',
+153 silly addNameRange     '0.9.6',
+153 silly addNameRange     '0.9.7',
+153 silly addNameRange     '0.9.8',
+153 silly addNameRange     '0.9.9',
+153 silly addNameRange     '0.9.10',
+153 silly addNameRange     '0.9.11',
+153 silly addNameRange     '0.9.12',
+153 silly addNameRange     '0.9.13',
+153 silly addNameRange     '0.9.14',
+153 silly addNameRange     '0.9.15',
+153 silly addNameRange     '0.9.16' ] ]
+154 verbose addNamed [ 'socket.io', '0.9.16' ]
+155 verbose addNamed [ '0.9.16', '0.9.16' ]
+156 silly lockFile a7acce22-socket-io-0-9-16 socket.io@0.9.16
+157 verbose lock socket.io@0.9.16 /home/sahil/.npm/a7acce22-socket-io-0-9-16.lock
+158 silly addNameRange number 2 { name: 'jade', range: '*', hasData: true }
+159 silly addNameRange versions [ 'jade',
+159 silly addNameRange   [ '0.0.1',
+159 silly addNameRange     '0.0.2',
+159 silly addNameRange     '0.1.0',
+159 silly addNameRange     '0.2.0',
+159 silly addNameRange     '0.2.1',
+159 silly addNameRange     '0.2.2',
+159 silly addNameRange     '0.2.3',
+159 silly addNameRange     '0.2.4',
+159 silly addNameRange     '0.3.0',
+159 silly addNameRange     '0.4.0',
+159 silly addNameRange     '0.4.1',
+159 silly addNameRange     '0.5.0',
+159 silly addNameRange     '0.5.1',
+159 silly addNameRange     '0.5.2',
+159 silly addNameRange     '0.5.3',
+159 silly addNameRange     '0.5.4',
+159 silly addNameRange     '0.5.5',
+159 silly addNameRange     '0.5.6',
+159 silly addNameRange     '0.5.7',
+159 silly addNameRange     '0.6.0',
+159 silly addNameRange     '0.6.1',
+159 silly addNameRange     '0.6.3',
+159 silly addNameRange     '0.7.0',
+159 silly addNameRange     '0.7.1',
+159 silly addNameRange     '0.8.0',
+159 silly addNameRange     '0.8.1',
+159 silly addNameRange     '0.8.2',
+159 silly addNameRange     '0.8.3',
+159 silly addNameRange     '0.8.4',
+159 silly addNameRange     '0.8.5',
+159 silly addNameRange     '0.8.6',
+159 silly addNameRange     '0.8.7',
+159 silly addNameRange     '0.8.8',
+159 silly addNameRange     '0.8.9',
+159 silly addNameRange     '0.9.0',
+159 silly addNameRange     '0.9.1',
+159 silly addNameRange     '0.9.2',
+159 silly addNameRange     '0.9.3',
+159 silly addNameRange     '0.10.0',
+159 silly addNameRange     '0.10.1',
+159 silly addNameRange     '0.10.2',
+159 silly addNameRange     '0.10.3',
+159 silly addNameRange     '0.10.4',
+159 silly addNameRange     '0.10.5',
+159 silly addNameRange     '0.10.6',
+159 silly addNameRange     '0.10.7',
+159 silly addNameRange     '0.11.0',
+159 silly addNameRange     '0.11.1',
+159 silly addNameRange     '0.12.0',
+159 silly addNameRange     '0.12.1',
+159 silly addNameRange     '0.12.2',
+159 silly addNameRange     '0.12.3',
+159 silly addNameRange     '0.12.4',
+159 silly addNameRange     '0.13.0',
+159 silly addNameRange     '0.14.0',
+159 silly addNameRange     '0.14.1',
+159 silly addNameRange     '0.14.2',
+159 silly addNameRange     '0.15.0',
+159 silly addNameRange     '0.15.1',
+159 silly addNameRange     '0.15.2',
+159 silly addNameRange     '0.15.3',
+159 silly addNameRange     '0.15.4',
+159 silly addNameRange     '0.16.0',
+159 silly addNameRange     '0.16.1',
+159 silly addNameRange     '0.16.2',
+159 silly addNameRange     '0.16.3',
+159 silly addNameRange     '0.16.4',
+159 silly addNameRange     '0.17.0',
+159 silly addNameRange     '0.18.0',
+159 silly addNameRange     '0.19.0',
+159 silly addNameRange     '0.20.0',
+159 silly addNameRange     '0.20.1',
+159 silly addNameRange     '0.20.2',
+159 silly addNameRange     '0.20.3',
+159 silly addNameRange     '0.21.0',
+159 silly addNameRange     '0.22.0',
+159 silly addNameRange     '0.22.1',
+159 silly addNameRange     '0.23.0',
+159 silly addNameRange     '0.24.0',
+159 silly addNameRange     '0.25.0',
+159 silly addNameRange     '0.26.0',
+159 silly addNameRange     '0.26.1',
+159 silly addNameRange     '0.26.2',
+159 silly addNameRange     '0.26.3',
+159 silly addNameRange     '0.27.0',
+159 silly addNameRange     '0.27.1',
+159 silly addNameRange     '0.27.2',
+159 silly addNameRange     '0.27.3',
+159 silly addNameRange     '0.27.4',
+159 silly addNameRange     '0.27.5',
+159 silly addNameRange     '0.27.6',
+159 silly addNameRange     '0.27.7',
+159 silly addNameRange     '0.28.0',
+159 silly addNameRange     '0.28.1',
+159 silly addNameRange     '0.28.2',
+159 silly addNameRange     '0.29.0',
+159 silly addNameRange     '0.30.0',
+159 silly addNameRange     '0.31.0',
+159 silly addNameRange     '0.31.1',
+159 silly addNameRange     '0.31.2',
+159 silly addNameRange     '0.32.0',
+159 silly addNameRange     '0.33.0' ] ]
+160 verbose addNamed [ 'jade', '0.33.0' ]
+161 verbose addNamed [ '0.33.0', '0.33.0' ]
+162 silly lockFile 88010256-jade-0-33-0 jade@0.33.0
+163 verbose lock jade@0.33.0 /home/sahil/.npm/88010256-jade-0-33-0.lock
+164 silly lockFile fa1d9a42-js-org-toobusy-toobusy-0-2-3-tgz https://registry.npmjs.org/toobusy/-/toobusy-0.2.3.tgz
+165 verbose lock https://registry.npmjs.org/toobusy/-/toobusy-0.2.3.tgz /home/sahil/.npm/fa1d9a42-js-org-toobusy-toobusy-0-2-3-tgz.lock
+166 verbose addRemoteTarball [ 'https://registry.npmjs.org/toobusy/-/toobusy-0.2.3.tgz',
+166 verbose addRemoteTarball   'c5de5d98adfb1192190d70e5b3a6a9fd3d08db72' ]
+167 silly lockFile fa1d9a42-js-org-toobusy-toobusy-0-2-3-tgz https://registry.npmjs.org/toobusy/-/toobusy-0.2.3.tgz
+168 silly lockFile fa1d9a42-js-org-toobusy-toobusy-0-2-3-tgz https://registry.npmjs.org/toobusy/-/toobusy-0.2.3.tgz
+169 silly lockFile a92681f0-toobusy-0-2-3 toobusy@0.2.3
+170 silly lockFile a92681f0-toobusy-0-2-3 toobusy@0.2.3
+171 silly lockFile e123b716-toobusy toobusy@*
+172 silly lockFile e123b716-toobusy toobusy@*
+173 error Error: EACCES, mkdir '/home/sahil/tmp/npm-2570'
+173 error  { [Error: EACCES, mkdir '/home/sahil/tmp/npm-2570'] errno: 3, code: 'EACCES', path: '/home/sahil/tmp/npm-2570' }
+174 error Please try running this command again as root/Administrator.
+175 error System Linux 3.2.0-49-generic
+176 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+177 error cwd /home/sahil/opentemp/Collaborator-/Collaborator-
+178 error node -v v0.10.13
+179 error npm -v 1.3.2
+180 error path /home/sahil/tmp/npm-2570
+181 error code EACCES
+182 error errno 3
+183 error stack Error: EACCES, mkdir '/home/sahil/tmp/npm-2570'
+184 verbose exit [ 3, true ]

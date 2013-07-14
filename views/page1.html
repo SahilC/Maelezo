@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Yahoo! Hack</title>
-    <style type="text/css"><!--
+    <style type="text/css">
       #container { position: absolute; }
       #imageView { border: 1px solid #000;width:100%;height:100% }
       #imageTemp { position: absolute; top: 1px; left: 1px;width:100%;height:100% }
 	#title{ border-radius:15px 15px 0px 0px;text-align:center}
-    --></style>
+    </style>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/base-min.css">
-  </head>
+	<link rel="stylesheet" href="style.css"> 
+ </head>
   <body>
 <div id="menu">
 	<div id="button">
@@ -29,7 +30,7 @@
 	var build=function(left,top)
 	{
 		YUI().use('node',function(Y){
-		Y.one(document.body).append('<div id="container" width=400px height=300px style="position:absolute;top:'+top+'%;left:'+left+'%">	<div id="title" style="background:rgba(10,10,10,0.8);position:relative;top:0%;left:0%;width:101%;height:13%;z-index:10">Title</div><canvas id="imageView"  ></canvas></div>');
+		Y.one(document.body).append('<div id="container" width=400px height=300px style="position:absolute;top:'+top+'%;left:'+left+'%"><div id="title" class="glass" style="background:rgba(10,10,100,0.8);position:relative;top:0%;left:0%;width:101%;height:13%;z-index:10">Title</div><canvas id="imageView"  ></canvas></div>');
 		});		
 	};
 $(function(){
