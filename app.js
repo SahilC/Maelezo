@@ -71,23 +71,11 @@ var debug = true;
   socket.emit('status', { connected: 'true'});
 
   //Canavs emits
-  socket.on("point",function(data){
-    socket.broadcast.emit("drawPoint",data);
-  });
-socket.on("spoint",function(data){
-    socket.broadcast.emit("drwPoint",data);
-  });
-socket.on("dim",function(data){
-    socket.broadcast.emit("redraw",data);
-  });
+  socket.on('updateView', function (data) {
+    console.log(data);
 
-socket.on("move",function(data){
-    socket.broadcast.emit("drawmove",data);
-    console.log("hello");
-  });
+    socket.broadcast.emit('viewUpdate',data);
 
-socket.on("flag",function(data){
-    socket.broadcast.emit("uflag",data);
   });
 });
 
@@ -95,9 +83,9 @@ socket.on("flag",function(data){
 //Routes
 
 app.get("/",function(req,res){
-   res.sendfile(__dirname+"/views/page1.html");
+   res.sendfile(__dirname+"/public/yui.html");
 });
   
-app.get("/canvas.js",function(req,res){
-   res.sendfile(__dirname+"/views/canvas.js");
+app.get("/yuican.js",function(req,res){
+   res.sendfile(__dirname+"/public/yuican.js");
 });
