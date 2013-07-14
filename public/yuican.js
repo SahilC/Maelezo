@@ -1,8 +1,8 @@
-var createCanvas = function(id, top, left, socket){
+var createCanvas = function(id, top, left, socket, tit){
 YUI().use('node','gallery-canvas','dd-drag','resize', function(Y)
 {
 	var container = Y.Node.create('<div id="container_'+ id +'" class="container" width=400px height=300px style="position:absolute;top:'+top+'%;left:'+left+'%">');
-	var title = Y.Node.create('<div id="title_'+ id +'" class="title" style="background:rgba(10,10,10,0.8);position:relative;top:0%;left:0%;width:101%;height:13%;z-index:10">Title</div>');
+	var title = Y.Node.create('<div id="title_'+ id +'" class="title" style="background:rgba(10,10,10,0.8);position:relative;top:0%;left:0%;width:101%;height:13%;z-index:10">'+ tit +'</div>');
 	var canvas = Y.Node.create('<canvas id="canvas_' + id + '" class="imageView"></canvas>');
 
 	container.appendChild(title);
