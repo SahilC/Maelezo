@@ -57,6 +57,8 @@ YUI().use('gallery-canvas','node',function(Y){
                               break;
                 case 'resize':document.getElementById('container_'+data['id']).style.width = data['content']['width'];
                               document.getElementById('container_'+data['id']).style.height = data['content']['height'];
+                              break;
+                case 'drawRelease':  lastx = lasty = null;
            }
       });
 

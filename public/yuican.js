@@ -78,6 +78,9 @@ YUI().use('node','gallery-canvas','dd-drag','resize', function(Y)
     		socket.emit('updateView', mvvm);
 		}
 	});
+    	canvas.on('mouseup', function (e) {
+    		socket.emit('updateView',{'type':'drawRelease', 'id':id, 'content':{} });
+    	});
 
     }
  
