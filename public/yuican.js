@@ -3,8 +3,10 @@ YUI().use('node','gallery-canvas','dd-drag','resize', function(Y)
 {
 	var container = Y.Node.create('<div id="container_'+ id +'" class="container" width=400px height=300px style="position:absolute;top:'+top+'%;left:'+left+'%">');
 	var title = Y.Node.create('<div id="title_'+ id +'" class="title" style="background:rgba(10,10,10,0.8);position:relative;top:0%;left:0%;width:101%;height:13%;z-index:10">'+ tit +'</div>');
-	var canvas = Y.Node.create('<canvas id="canvas_' + id + '" class="imageView"></canvas>');
+	var close = Y.Node.create('<div id="close_'+ id +'" class="close" style="position:relative;top:0%;left:90%;width:11%;height:13%;z-index:11;cursor:pointer"><img src="close.png" style="width:70%;height:70%"/></div>');
 	
+	var canvas = Y.Node.create('<canvas id="canvas_' + id + '" class="imageView"></canvas>');
+	title.appendChild(close);
 	container.appendChild(title);
 	container.appendChild(canvas);
 	Y.one('body').appendChild(container);
@@ -82,7 +84,11 @@ YUI().use('node','gallery-canvas','dd-drag','resize', function(Y)
     		socket.emit('updateView',{'type':'drawRelease', 'id':id, 'content':{} });
     	});
 
-
+	//close
+	close.on("click",function(e){
+		document.getElementById('container_'+id).style.display="none";
+		socket.emit("updateView",{'type':"closecont",'id':id});
+	});
     }
  
 });

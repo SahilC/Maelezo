@@ -66,6 +66,9 @@ YUI().use('gallery-canvas','node','event',function(Y){
 		case 'newNote': createCanvas(data['content']['id'],30,45,socket, "New Note");
 				 document.getElementById('title_'+data['content']['id']).style.background = "#"+data['content']['color'];
 				break;
+		case 'closecont':
+				document.getElementById('container_'+data['id']).style.display="none";
+				break;
            }
       });
 

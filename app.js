@@ -100,3 +100,6 @@ app.get("/style.css",function(req,res){
 app.get("/plus.png",function(req,res){
    res.sendfile(__dirname+"/views/plus.png");
 });
+app.get("/close.png",function(req,res){
+   res.sendfile(__dirname+"/public/close.png");
+});
