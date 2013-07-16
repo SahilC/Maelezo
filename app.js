@@ -57,13 +57,13 @@ var debug = true;
 // Heroku won't actually allow us to use WebSockets
 // so we have to setup polling instead.
 // https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
-/*io.configure(function () {
+io.configure(function () {
   io.set("transports", ["xhr-polling"]);
   io.set("polling duration", 10);
   io.set("close timeout", 10);
   io.set("log level", 1);
 });
-*/
+
   io.sockets.on('connection', function (socket) {
 
   if(debug) console.log("Connected");
